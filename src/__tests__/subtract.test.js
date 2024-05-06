@@ -15,3 +15,11 @@ test('adds 5 - -5 to equal 10', () => {
 test('adds 0.3 - 0.2 to close 0.1', () => {
   expect(subtract(0.3, 0.2)).toBeCloseTo(0.1);
 });
+
+test('adds 3 - 3 to be less than 1', () => {
+  expect(subtract(3, 3)).toBeLessThan(1);
+});
+
+test('adds 5 - 3 to be less than or equal 3', () => {
+  expect(subtract(5, 3)).toBeLessThanOrEqual(3);
+});

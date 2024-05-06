@@ -15,3 +15,7 @@ test('adds 5 / -5 to equal -1', () => {
 test('adds 3.5 / 1.5 to be close 2.33', () => {
   expect(divide(3.5, 1.5)).toBeCloseTo(2.33);
 });
+
+test('adds 1/0 to throw an error', () => {
+  expect(() => divide(1, 0)).toThrow(new Error('Impossible to divide per 0'));
+});
